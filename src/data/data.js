@@ -1,4 +1,4 @@
-export const products = [
+export const SHOP_DATA = [
     {
         id: 1,
         title: "Smartphone",
@@ -34,7 +34,7 @@ export const products = [
     },
 ]
 
-export const coupons = {
+export const COUPONS = {
     SAVE10: {
         name: 'SAVE10',
         discount: 10
