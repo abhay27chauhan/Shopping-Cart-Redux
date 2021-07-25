@@ -8,7 +8,7 @@ export const SHOP_DATA = [
           on top of the leaderboard while gaming. Its 16.5 cm (6.5) Mini-drop Fullscreen ensures an immersive
            experience while gaming, streaming content, and more. `,
         price: 20000,
-        image: "https://github.com/Jasbir96/Batches/blob/main/PAB/React/6_Redux_Resume_builder/resume-builder/src/cartPOC/data/smartphone.jpg?raw=true",
+        image: "https://github.com/Jasbir96/Batches/blob/main/PAB/React/6_Redux_Resume_builder_POCS/resume-builder/src/cartPOC/data/smartphone.jpg?raw=true",
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export const SHOP_DATA = [
          wherever you are. With an IPX7 rating, it ensures water resistance so that you can listen to music by
           the poolside without a worry in the world.`,
         price: 999.0,
-        image: "https://github.com/Jasbir96/Batches/blob/main/PAB/React/6_Redux_Resume_builder/resume-builder/src/cartPOC/data/speaker.jpg?raw=true",
+        image: "https://github.com/Jasbir96/Batches/blob/main/PAB/React/6_Redux_Resume_builder_POCS/resume-builder/src/cartPOC/data/speaker.jpg?raw=true",
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ export const SHOP_DATA = [
         On top of that, the empire is at war with the Chandravanshis who have allied with The Nagas, a group of 
         sinister and deformed human beings who have extraordinary martial art skills.`,
         price: 250.0,
-        image: "https://github.com/Jasbir96/Batches/blob/main/PAB/React/6_Redux_Resume_builder/resume-builder/src/cartPOC/data/book.jpg?raw=true"
+        image: "https://github.com/Jasbir96/Batches/blob/main/PAB/React/6_Redux_Resume_builder_POCS/resume-builder/src/cartPOC/data/book.jpg?raw=true"
     },
 ]
 

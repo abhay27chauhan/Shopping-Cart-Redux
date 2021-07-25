@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Grid } from '@material-ui/core'
 import { connect } from "react-redux";
 
-import ProductCard from '../../component/Card/Card';
+import ProductCard from '../../component/ProductCard/ProductCard';
 import { useStyles } from './styles';
 
 function Home(props) {
