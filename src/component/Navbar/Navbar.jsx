@@ -13,7 +13,7 @@ function Navbar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" >
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             REDUX - SHOPPING
