@@ -6,16 +6,26 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Button } from '@material-ui/core';
 import { useStyles } from './styles';
+import { connect } from 'react-redux';
+import { CART_ACTIONS } from '../../redux/CartReducer/CartReducer';
 
-function ProductInfoCard(props) {
+function ProductInfoCard({removeFromCart, addToCart, clearFromCart, ...props}) {
   const classes = useStyles();
   const [qty, setQty] = useState(1);
+
+  console.log("cart product ", props)
 
   const handleQty = (e) => {
     const val = e.target.value;
     if(val < 1){
       return;
-    } 
+    }
+
+    if(val < qty){
+      removeFromCart(props);
+    }else if(val > qty){
+      addToCart(props);
+    }
 
     setQty(val);
   }
@@ -46,7 +56,7 @@ function ProductInfoCard(props) {
             {props.description}
           </Typography>
           <div className={classes.btnContainer}>
-            <Button endIcon={<DeleteIcon />} variant="contained" className={classes.btn} >
+            <Button onClick={() => clearFromCart(props) } endIcon={<DeleteIcon />} variant="contained" className={classes.btn} >
               Delete
             </Button>
             <Typography variant="h6" component="h6">
@@ -59,4 +69,20 @@ function ProductInfoCard(props) {
   );
 }
 
-export default ProductInfoCard
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (productObj) => {
+      return dispatch({type: CART_ACTIONS.ADD_TO_CART, payload: productObj});
+    },
+
+    removeFromCart: (productObj) => {
+      return dispatch({type: CART_ACTIONS.REMOVE_FROM_CART, payload: productObj});
+    },
+
+    clearFromCart: (productObj) => {
+      return dispatch({type: CART_ACTIONS.CLEAR_ITEM_FROM_CART, payload: productObj});
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ProductInfoCard);

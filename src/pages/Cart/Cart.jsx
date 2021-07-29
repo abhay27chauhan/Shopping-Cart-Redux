@@ -8,7 +8,7 @@ import {useStyles} from './styles'
 
 function Cart(props) {
     const classes = useStyles();
-    console.log(props);
+    
     return (
         <div className={classes.root}>
             <Container className={classes.container} component="main" maxWidth="lg">
@@ -22,7 +22,7 @@ function Cart(props) {
                         <div>
                             {
                                 props.cart.map(obj => (
-                                    <ProductInfoCard {...obj} />
+                                    <ProductInfoCard key={obj.id} {...obj} />
                                 ))
                             }
                         </div>

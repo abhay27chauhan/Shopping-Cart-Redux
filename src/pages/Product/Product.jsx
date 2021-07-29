@@ -14,8 +14,6 @@ function Product(props){
 
     useEffect(() => {
         const product = productArr.find(obj => obj.id == pid);
-        console.log(productArr);
-        console.log(product)
         setCurrentProduct(product);
     }, [pid])
 

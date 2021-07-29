@@ -33,7 +33,7 @@ function ProductCard({addToCart, ...rest}) {
             {rest.description}
           </Typography>
           <Typography className={classes.price} variant="h5" component="h2">
-            {rest.price}
+            ₹ {rest.price}
           </Typography>
         </CardContent>
       </CardActionArea>

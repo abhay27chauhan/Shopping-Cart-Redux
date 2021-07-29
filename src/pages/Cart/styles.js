@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme) => ({
         display: "flex",
         paddingTop:"4rem", 
         paddingBottom: "2rem",
-        justifyContent: "space-between"
+        gap: "20px"
     },
     cartItems: {
         width: "74%",

@@ -23,7 +23,7 @@ function Navbar(props) {
               <ShoppingCartIcon color="inherit" />
             </Link>
           </IconButton>
-          <Typography variant="p" className={classes.count}>
+          <Typography variant="h6" className={classes.count}>
             {props.totalItems}
           </Typography>
         </Toolbar>

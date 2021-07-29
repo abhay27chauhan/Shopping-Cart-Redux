@@ -27,3 +27,11 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
         : cartItem
     )
 }
+
+export const clearItemFromCart = (state, cartItemToRemove) => {
+    let qty = cartItemToRemove.quantity;
+    let newCart = state.cart.filter(obj => obj.id !== cartItemToRemove.id);
+    let newTotalItems = state.totalItems - qty;
+
+    return {totalItems: newTotalItems, coupon: state.coupon, cart: newCart};
+}
